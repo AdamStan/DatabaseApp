@@ -1,0 +1,2 @@
+# DatabaseApp
+Hibernate + postgresql

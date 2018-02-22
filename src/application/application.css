@@ -1,0 +1,38 @@
+.background {
+    -fx-background-color: rgb(100,140,185);
+}
+.label_main {
+    -fx-font-size: 24px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: rgb(0,0,0);
+    -fx-opacity: 0.6;
+}
+.button{
+	-fx-background-color: rgb(74,89,225);
+	-fx-border-style: solid;
+	-fx-text-fill: white;
+}
+.button:hover{
+	-fx-background-color: rgb(96,132,225);
+	-fx-border-style: solid;
+	-fx-text-fill: white;
+}
+.button:active{
+	-fx-background-color: rgb(96,132,225);
+	-fx-border-style: solid;
+	-fx-border-color: rgb(74,89,225);
+	-fx-text-fill: white;
+}
+.image-view{
+	-fx-border-style: solid;
+	-fx-border-width: 20px;
+	-fx-border-color: bronze;
+}
+.border-pane{
+	-fx-background-color:rgb(0,98,196);
+}
+.VBox{
+	-fx-border-style: solid;
+	-fx-border-width: 4px;
+	-fx-border-color: rgb(74,140,225);
+}

@@ -34,7 +34,7 @@ public class Main extends Application {
         session = factory.openSession();
 	}
 	public static void main(String[] args) {
-		//connect_with_database();
+		connect_with_database();
 		launch(args);
 	}
 }

@@ -1,4 +1,4 @@
-package application.recourses;
+package application.resources;
 
 import java.io.Serializable;
 import java.util.HashSet;

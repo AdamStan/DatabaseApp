@@ -1,4 +1,4 @@
-package application.recourses;
+package application.resources;
 
 import application.resources.Faculty;
 

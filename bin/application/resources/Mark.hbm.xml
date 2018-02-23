@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="adam.stan.objects.Mark" table="mark" catalog="forschooldb">
+        <composite-id>
+        	<key-many-to-one name="student" class="adam.stan.objects.Student">
+	            <column name="student_id" not-null="true" />
+	        </key-many-to-one>
+			<key-many-to-one name="subject" class="adam.stan.objects.Subject">
+				<column name="subject_id" not-null="true"/>
+			</key-many-to-one>
+        </composite-id>
+        <property name="value" type="java.lang.Double">
+            <column name="value" precision="2" />
+        </property>
+    </class>
+</hibernate-mapping>

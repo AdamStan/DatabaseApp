@@ -2,9 +2,10 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="application.recourses.Faculty" table="faculties" catalog="university">
+    <class name="application.resources.Faculty" table="faculties" catalog="university">
         <id name="ID" type="java.lang.Integer">
             <column name="ID" />
+            <generator class="identity" />
         </id>
         <property name="facultyName" type="string">
             <column name="faculty-name" length="32" not-null="true"/>
@@ -12,16 +13,16 @@
         <set name="leaders" table="leaders"
 				inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="leader_id" not-null="true" />
+                <column name="ID" not-null="true" />
             </key>
-            <one-to-many class="application.recourses.Leader" />
+            <one-to-many class="application.resources.Leader" />
         </set>
         <set name="students" table="students"
 				inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="student_id" not-null="true" />
+                <column name="numer-index" not-null="true" />
             </key>
-            <one-to-many class="application.recourses.Student" />
+            <one-to-many class="application.resources.Student" />
         </set>
     </class>
 </hibernate-mapping>

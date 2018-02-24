@@ -4,15 +4,15 @@
 <hibernate-mapping>
     <class name="adam.stan.objects.Mark" table="mark" catalog="forschooldb">
         <composite-id>
-        	<key-many-to-one name="student" class="adam.stan.objects.Student">
-	            <column name="student_id" not-null="true" />
-	        </key-many-to-one>
-			<key-many-to-one name="subject" class="adam.stan.objects.Subject">
+        	<key-many-to-one name="subject" class="adam.stan.objects.Subject">
 				<column name="subject_id" not-null="true"/>
 			</key-many-to-one>
         </composite-id>
         <property name="value" type="java.lang.Double">
             <column name="value" precision="2" />
         </property>
+        <many-to-one name="student" class="adam.stan.objects.Student">
+            <column name="student_id" not-null="true" />
+       	</many-to-one>
     </class>
 </hibernate-mapping>

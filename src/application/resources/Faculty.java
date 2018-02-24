@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-import application.recourses.Leader;
-import application.recourses.Student;
-
 public class Faculty implements Serializable {
 	private static final long serialVersionUID = 1030989201941101320L;
 

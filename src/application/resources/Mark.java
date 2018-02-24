@@ -1,4 +1,4 @@
-package application.recourses;
+package application.resources;
 
 public class Mark {
 	private Integer ID;

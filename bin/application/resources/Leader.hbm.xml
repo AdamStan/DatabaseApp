@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="application.resources.Leader" table="leaders" catalog="university">
+        <id name="ID" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="32" not-null="true"/>
+        </property>
+        <property name="surname" type="string">
+            <column name="surname" length="32" not-null="true"/>
+        </property>
+        <many-to-one name="faculty" class="application.resources.Faculty">
+            <column name="ID" not-null="true" />
+        </many-to-one>
+		<one-to-one name="subject" class="application.resources.Subject" cascade="save-update">
+        </one-to-one>
+
+    </class>
+</hibernate-mapping>

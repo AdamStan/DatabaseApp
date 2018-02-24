@@ -20,7 +20,7 @@
         <set name="students" table="students"
 				inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="numer-index" not-null="true" />
+                <column name="index-number" not-null="true" />
             </key>
             <one-to-many class="application.resources.Student" />
         </set>

@@ -2,20 +2,22 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="adam.stan.objects.Subject" table="subject" catalog="forschooldb">
-        <id name="Id" type="java.lang.Integer">
-            <column name="Id" />
+    <class name="application.resources.Subject" table="subject" catalog="university">
+        <id name="ID" type="java.lang.Integer">
+            <column name="ID" />
             <generator class="identity" />
         </id>
-        <property name="name" type="string">
-            <column name="name" length="64" not-null="true" unique="true" />
+        <property name="nameOfSubject" type="string">
+            <column name="nameOfSubject" length="64" not-null="true" unique="true" />
         </property>
-        <set name="marks" table="mark"
+        <set name="marks" table="marks"
 				inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="subject_id" not-null="true" />
+                <column name="ID" not-null="true" />
             </key>
-            <one-to-many class="adam.stan.objects.Mark" />
+            <one-to-many class="application.resources.Mark" />
         </set>
+        <one-to-one name="leader" class="application.resources.Leader" cascade="save-update">
+        </one-to-one>
     </class>
 </hibernate-mapping>

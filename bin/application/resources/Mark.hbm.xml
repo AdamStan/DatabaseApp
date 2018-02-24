@@ -2,17 +2,19 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="adam.stan.objects.Mark" table="mark" catalog="forschooldb">
-        <composite-id>
-        	<key-many-to-one name="subject" class="adam.stan.objects.Subject">
-				<column name="subject_id" not-null="true"/>
-			</key-many-to-one>
-        </composite-id>
+    <class name="application.resources.Mark" table="mark" catalog="university">
+        <id name="ID" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="identity" />
+        </id>
         <property name="value" type="java.lang.Double">
             <column name="value" precision="2" />
         </property>
-        <many-to-one name="student" class="adam.stan.objects.Student">
-            <column name="student_id" not-null="true" />
+        <many-to-one name="student" class="application.resources.Student">
+            <column name="index-number" not-null="true" />
+       	</many-to-one>
+       	<many-to-one name="subject" class="application.resources.Subject">
+            <column name="ID" not-null="true" />
        	</many-to-one>
     </class>
 </hibernate-mapping>

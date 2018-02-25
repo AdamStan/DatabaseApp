@@ -1,5 +1,5 @@
 package application;
-
+//add some comment
 import java.util.ArrayList;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

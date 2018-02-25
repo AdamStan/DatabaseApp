@@ -16,8 +16,7 @@
         <many-to-one name="faculty" class="application.resources.Faculty">
             <column name="faculty_id" not-null="true" />
         </many-to-one>
-		<one-to-one name="subject" class="application.resources.Subject" cascade="save-update">
-        </one-to-one>
+		<one-to-one name="subject" class="application.resources.Subject" cascade="save-update"/>
 
     </class>
 </hibernate-mapping>

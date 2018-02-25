@@ -4,7 +4,7 @@
 <hibernate-mapping>
     <class name="application.resources.Student" table="students" catalog="public">
         <id name="indexNumber" type="java.lang.Integer">
-            <column name="index-number" />
+            <column name="indexnumber" />
         </id>
         <property name="name" type="string">
             <column name="name" length="20" not-null="true"/>
@@ -13,7 +13,7 @@
             <column name="surname" length="20" not-null="true"/>
         </property>
         <many-to-one name="faculty" class="application.resources.Faculty">
-            <column name="ID" not-null="true" />
+            <column name="faculty_id" not-null="true" />
         </many-to-one>
         <set name="marks" table="marks"
 				inverse="true" lazy="true" fetch="select">

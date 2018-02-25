@@ -9,6 +9,7 @@ public class Leader {
 	private Subject subject;
 	private Faculty faculty;
 
+	public Leader() { }
 	public Leader(String name, String surname, Subject subject, Faculty faculty) {
 		super();
 		this.name = name;

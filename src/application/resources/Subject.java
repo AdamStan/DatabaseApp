@@ -11,6 +11,7 @@ public class Subject {
 	private Set marks = new HashSet<Mark>();
 	private Leader leader;
 
+	public Subject(){}
 	public Subject(String nameOfSubject) {
 		super();
 		this.nameOfSubject = nameOfSubject;

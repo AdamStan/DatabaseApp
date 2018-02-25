@@ -14,6 +14,7 @@ public class Faculty implements Serializable {
 	//Set with students
 	private Set students = new HashSet<Student>();
 
+	public Faculty() { }
 	public Faculty(String facultyName) {
 		super();
 		this.facultyName = facultyName;

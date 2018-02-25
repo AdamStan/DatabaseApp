@@ -14,6 +14,7 @@ public class Student {
 	//set with marks
 	private Set marks = new HashSet<Mark>();
 
+	public Student(){}
 	public Student(Integer indexNumber, String name, String surname, Faculty faculty) {
 		super();
 		this.indexNumber = indexNumber;

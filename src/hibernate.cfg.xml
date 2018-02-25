@@ -3,16 +3,19 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-    <property name="hibernate.connection.driver_class">org.hibernate.Driver</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.username">postgres</property>
     <property name="hibernate.connection.password">h@slo123</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/university</property>
+
     <property name="connection_pool_size">1</property>
+    <property name="hbm2ddl.auto">create</property>
     <property name="show_sql">true</property>
-    <mapping resource="application/recourses/Faculty.hbm.xml" />
-    <mapping resource="application/recourses/Leader.hbm.xml" />
-    <mapping resource="application/recourses/Mark.hbm.xml" />
-    <mapping resource="application/recourses/Student.hbm.xml" />
-    <mapping resource="application/recourses/Subject.hbm.xml" />
+
+    <mapping resource="application/resources/Faculty.hbm.xml" />
+    <mapping resource="application/resources/Leader.hbm.xml" />
+    <mapping resource="application/resources/Mark.hbm.xml" />
+    <mapping resource="application/resources/Student.hbm.xml" />
+    <mapping resource="application/resources/Subject.hbm.xml" />
   </session-factory>
 </hibernate-configuration>

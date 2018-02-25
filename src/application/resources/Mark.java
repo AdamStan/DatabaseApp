@@ -6,6 +6,7 @@ public class Mark {
 	private Subject subject;
 	private Student student;
 
+	public Mark(){ }
 	public Mark(Double value) {
 		super();
 		this.value = value;

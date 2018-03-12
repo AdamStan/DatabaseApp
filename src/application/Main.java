@@ -47,11 +47,12 @@ public class Main extends Application {
 		int number = 200200;
 		for(Faculty f : faculties){
 			session.save(f);
-			/*Leader leader = new Leader("Jan", "Nowak", f);
+			Leader leader = new Leader("Jan", "Nowak", f);
+			System.out.println();
 			session.save(leader);
 			Student stud = new Student(number,"Adam","Student", f);
 			session.save(stud);
-			number += 1;*/
+			number += 1;
 		}
 		tx.commit();
 		System.out.println("Faculties was added");

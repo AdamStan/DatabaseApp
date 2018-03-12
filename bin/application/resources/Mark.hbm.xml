@@ -10,11 +10,11 @@
         <property name="value" type="java.lang.Double">
             <column name="value" precision="2" />
         </property>
-        <!-- <many-to-one name="student" class="application.resources.Student">
-            <column name="indexnumber" not-null="true" />
-       	</many-to-one> -->
-       	<!-- <many-to-one name="subject" class="application.resources.Subject">
+        <many-to-one name="student" class="application.resources.Student">
+            <column name="student_id" not-null="true" />
+       	</many-to-one>
+       	<many-to-one name="subject" class="application.resources.Subject">
             <column name="subject_id" not-null="true" />
-       	</many-to-one> -->
+       	</many-to-one>
     </class>
 </hibernate-mapping>

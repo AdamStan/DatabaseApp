@@ -13,8 +13,8 @@
         <property name="surname" type="string">
             <column name="surname" length="32" not-null="true"/>
         </property>
-        <!-- <many-to-one name="faculty" class="application.resources.Faculty">
+        <many-to-one name="faculty" class="application.resources.Faculty">
             <column name="faculty_id" not-null="true" />
-        </many-to-one>  -->
+        </many-to-one>
     </class>
 </hibernate-mapping>

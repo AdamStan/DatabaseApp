@@ -13,7 +13,7 @@
         <set name="marks" table="marks"
 				inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="ID" not-null="true" />
+                <column name="subject_ID" not-null="true" />
             </key>
             <one-to-many class="application.resources.Mark" />
         </set>

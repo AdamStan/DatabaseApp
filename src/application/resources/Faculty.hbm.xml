@@ -10,17 +10,16 @@
         <property name="facultyName" type="string">
             <column name="facultyname" length="32" not-null="true"/>
         </property>
-        <set name="leaders" table="leaders"
-				inverse="true" lazy="true" fetch="select">
+        <set name="leaders" table="leaders">
             <key>
-                <column name="ID" not-null="true" />
+                <column name="faculty_ID" not-null="true" />
             </key>
             <one-to-many class="application.resources.Leader" />
         </set>
         <set name="students" table="students"
-				inverse="true" lazy="true" fetch="select">
+				inverse="false" lazy="true" fetch="select">
             <key>
-                <column name="indexnumber" not-null="true" />
+                <column name="faculty_ID" not-null="true" />
             </key>
             <one-to-many class="application.resources.Student" />
         </set>

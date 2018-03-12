@@ -15,8 +15,8 @@ public class HibernateUtil {
         try {
             Configuration configuration = new Configuration();
             configuration.configure();
-            ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(
-            configuration.getProperties()).buildServiceRegistry();
+            ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().
+            		applySettings(configuration.getProperties()).buildServiceRegistry();
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         } catch (HibernateException hbe) {
             hbe.printStackTrace();

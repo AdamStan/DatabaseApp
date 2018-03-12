@@ -4,7 +4,7 @@
 <hibernate-mapping>
     <class name="application.resources.Leader" table="leaders" catalog="public">
         <id name="ID" type="java.lang.Integer">
-            <column name="ID" />
+            <column name="leader_ID" />
             <generator class="identity" />
         </id>
         <property name="name" type="string">
@@ -13,10 +13,8 @@
         <property name="surname" type="string">
             <column name="surname" length="32" not-null="true"/>
         </property>
-        <many-to-one name="faculty" class="application.resources.Faculty">
+        <!-- <many-to-one name="faculty" class="application.resources.Faculty">
             <column name="faculty_id" not-null="true" />
-        </many-to-one>
-		<one-to-one name="subject" class="application.resources.Subject" cascade="save-update"/>
-
+        </many-to-one>  -->
     </class>
 </hibernate-mapping>

@@ -6,15 +6,13 @@ public class Leader {
 	private Integer ID;
 	private String name;
 	private String surname;
-	private Subject subject;
 	private Faculty faculty;
 
 	public Leader() { }
-	public Leader(String name, String surname, Subject subject, Faculty faculty) {
+	public Leader(String name, String surname, Faculty faculty) {
 		super();
 		this.name = name;
 		this.surname = surname;
-		this.subject = subject;
 		this.faculty = faculty;
 	}
 
@@ -35,12 +33,6 @@ public class Leader {
 	}
 	public void setSurname(String surname) {
 		this.surname = surname;
-	}
-	public Subject getSubject() {
-		return subject;
-	}
-	public void setSubject(Subject subject) {
-		this.subject = subject;
 	}
 	public Faculty getFaculty() {
 		return faculty;

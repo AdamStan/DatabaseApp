@@ -33,7 +33,6 @@ public class Main extends Application {
 		SessionFactory factory = HibernateUtil.configureSessionFactory();
         session = factory.openSession();
 	}
-	@SuppressWarnings("unchecked")
 	public static void add_faculties_and_people(){
 		Transaction tx = session.beginTransaction();
 		ArrayList<Faculty> faculties = new ArrayList<Faculty>();
@@ -44,16 +43,13 @@ public class Main extends Application {
 		faculties.add(new Faculty("BAIS"));
 		faculties.add(new Faculty("WIPOS"));
 		faculties.add(new Faculty("BINOZ"));
-		int number = 200200;
 		for(Faculty f : faculties){
 			session.save(f);
-			Leader leader = new Leader("Jan", "Nowak", f);
-			System.out.println();
-			session.save(leader);
-			Student stud = new Student(number,"Adam","Student", f);
-			session.save(stud);
-			number += 1;
 		}
+		Leader leader = new Leader("Jan", "Nowak", faculties.get(0));
+		session.save(leader);
+		Student stud = new Student(200200,"Adam","Student", faculties.get(0));
+		session.save(stud);
 		tx.commit();
 		System.out.println("Faculties was added");
 	}

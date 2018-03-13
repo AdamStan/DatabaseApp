@@ -10,6 +10,9 @@
         <property name="nameOfSubject" type="string">
             <column name="nameOfSubject" length="64" not-null="true" unique="true" />
         </property>
+		<many-to-one name="leader" class="application.resources.Leader">
+            <column name="leader_id" not-null="true" />
+        </many-to-one>
         <set name="marks" table="marks"
 				inverse="true" lazy="true" fetch="select">
             <key>
@@ -17,6 +20,5 @@
             </key>
             <one-to-many class="application.resources.Mark" />
         </set>
-        <one-to-one name="leader" class="application.resources.Leader" cascade="save-update"/>
     </class>
 </hibernate-mapping>

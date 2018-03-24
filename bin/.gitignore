@@ -1,2 +1,4 @@
 /application/
+/function_on_trigger.sql
 /hibernate.cfg.xml
+/trigger.sql
